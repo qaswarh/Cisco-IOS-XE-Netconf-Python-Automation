@@ -37,6 +37,22 @@ def netconf_config(ns):
                       '</filter>'
         xmlDom = xml.dom.minidom.parseString( str( m.get_config('running',ns_filter)))
         print(xmlDom.toprettyxml( indent = "  " ))
+        
+    elif ns == 'interfaces':
+        ns_filter = '<filter xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">' + \
+                          f'<{ns} xmlns="urn:ietf:params:xml:ns:yang:ietf-{ns}">' + \
+                          f'</{ns}>' + \
+                      '</filter>'
+        xmlDom = xml.dom.minidom.parseString( str( m.get_config('running',ns_filter)))
+        print(xmlDom.toprettyxml( indent = "  " ))
+
+    elif ns == 'nacm':
+        ns_filter = '<filter xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">' + \
+                          f'<{ns} xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-acm">' + \
+                          f'</{ns}>' + \
+                      '</filter>'
+        xmlDom = xml.dom.minidom.parseString( str( m.get_config('running',ns_filter)))
+        print(xmlDom.toprettyxml( indent = "  " ))        
     elif ns == 'routing':
         ns_filter = '<filter xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">' + \
                           f'<{ns} xmlns="urn:ietf:params:xml:ns:yang:ietf-{ns}">' + \
@@ -81,21 +97,7 @@ if __name__ == '__main__':
 
     netconf_config(args.namespace)
 
-    elif ns == 'interfaces':
-        ns_filter = '<filter xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">' + \
-                          f'<{ns} xmlns="urn:ietf:params:xml:ns:yang:ietf-{ns}">' + \
-                          f'</{ns}>' + \
-                      '</filter>'
-        xmlDom = xml.dom.minidom.parseString( str( m.get_config('running',ns_filter)))
-        print(xmlDom.toprettyxml( indent = "  " ))
 
-    elif ns == 'nacm':
-        ns_filter = '<filter xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">' + \
-                          f'<{ns} xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-acm">' + \
-                          f'</{ns}>' + \
-                      '</filter>'
-        xmlDom = xml.dom.minidom.parseString( str( m.get_config('running',ns_filter)))
-        print(xmlDom.toprettyxml( indent = "  " ))
 
         
         
