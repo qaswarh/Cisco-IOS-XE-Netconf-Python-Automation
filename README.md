@@ -6,6 +6,6 @@ Use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) to experience i
 **RPC Get**<br>
 Use nciosxe_getconfig_ns.py as per help:<br>
 ![image](https://user-images.githubusercontent.com/47313728/235594887-c5b89c5e-361b-42fd-a6c9-7b2d8c5041bc.png)
-nciosxe_getconfig_ns.py will yield same results as 
+nciosxe_getconfig_ns.py will yield same results as nciosxe_getconfig.yml in Ansible automation repo for nciosxe<br>
 
 
