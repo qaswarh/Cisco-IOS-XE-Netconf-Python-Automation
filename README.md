@@ -3,7 +3,7 @@ If you've intenet then explore [Cisco IOS XE CSR](https://devnetsandbox.cisco.co
 All you need a Linux Box (ADM Server aka Jump Server) with Python installed<br>
 Use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) to experience it from Windows machine<br>
 
-**RPC Get**
+**RPC Get**<br>
 Use nciosxe_getconfig_ns.py as per help:<br>
 ![image](https://user-images.githubusercontent.com/47313728/235594887-c5b89c5e-361b-42fd-a6c9-7b2d8c5041bc.png)
 
