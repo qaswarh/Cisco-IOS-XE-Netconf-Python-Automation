@@ -7,5 +7,6 @@ Use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) to experience i
 Use nciosxe_getconfig_ns.py as per help:<br>
 ![image](https://user-images.githubusercontent.com/47313728/235594887-c5b89c5e-361b-42fd-a6c9-7b2d8c5041bc.png)
 nciosxe_getconfig_ns.py will yield same results as nciosxe_getconfig.yml in Ansible automation repo for nciosxe<br>
+NAMESPACES in the help are for the user to input, scritp will translate to actual being used.<br>
 
 
