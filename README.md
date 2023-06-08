@@ -9,4 +9,19 @@ Use nciosxe_getconfig_ns.py as per help:<br>
 nciosxe_getconfig_ns.py will yield same results as nciosxe_getconfig.yml in Ansible automation repo for nciosxe<br>
 NAMESPACES in the help are for the user to input, scritp will translate to actual being used.<br>
 
+You can do xmltodict in any namespace and get status/health  
+
+        interface = xmlDom.toprettyxml( indent = "  " )
+        netconf_data = xmltodict.parse(interface)["rpc-reply"]["data"]
+        interfaces = netconf_data["interfaces"]["interface"]
+        for interface in interfaces:
+            if interface["enabled"] == 'true':
+                print("Interface {} is Up".format(interface["name"]))
+            else:
+                print("Interface {} is Down".format(interface["name"]))
+
+
+Adding above lines in the namespace 'interfaces' would yeild
+
+![image](https://github.com/qaswarh/Cisco-IOS-XE-Netconf-Python-Automation/assets/47313728/fa49fc57-18ff-47a2-bdb0-6f664bcddc89)
 
